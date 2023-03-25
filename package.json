@@ -19,13 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryansonshine/memorable-random-string.git"
+    "url": "git+https://github.com/decyrus/memorable-random-string.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Ryan Sonshine",
-    "email": "ryansonshine@users.noreply.github.com",
-    "url": "https://github.com/ryansonshine"
+    "name": "Kir Dergachev",
+    "email": "cyrus.de@gmail.com",
+    "url": "https://github.com/decyrus"
   },
   "engines": {
     "node": ">=12.0"
