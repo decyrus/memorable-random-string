@@ -1,13 +1,23 @@
-import { myPackage } from '../src';
+import generateMemorableRandomString from '../src';
 
-describe('index', () => {
-  describe('myPackage', () => {
-    it('should return a string containing the message', () => {
-      const message = 'Hello';
+describe('generateMemorableRandomString', () => {
+  test('should return a string with the specified length', () => {
+    const length = 10;
+    const result = generateMemorableRandomString(length);
+    expect(result.length).toBe(length);
+  });
 
-      const result = myPackage(message);
-
-      expect(result).toMatch(message);
-    });
+  test('should only contain alternating consonants and vowels', () => {
+    const length = 10;
+    const result = generateMemorableRandomString(length);
+    const isConsonant = (char: string) => /[bcdfghjklmnpqrstvwxyz]/.test(char);
+    const isVowel = (char: string) => /[aeiou]/.test(char);
+    for (let i = 0; i < length; i++) {
+      if (i % 2 === 0) {
+        expect(isConsonant(result[i])).toBe(true);
+      } else {
+        expect(isVowel(result[i])).toBe(true);
+      }
+    }
   });
 });
